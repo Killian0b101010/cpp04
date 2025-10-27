@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 21:50:20 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/26 20:48:14 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/10/27 02:27:48 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ int main() {
   original.setIdeas(0, "Sleep");
   original.setIdeas(1, "Eat");
   original.setIdeas(2, "Play");
-
   Brain copy(original);
   copy.setIdeas(0, "Run");
   std::cout << "Original idea[0]: " << original.getIdeas(0) << std::endl;

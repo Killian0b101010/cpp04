@@ -16,6 +16,7 @@
 Cat::Cat() {
   this->name = "Cat";
   std::cout << "Constructor Cat created" << std::endl;
+  this->brain = new Brain();
   this->brain->setIdeas(0, "Think");
   this->brain->setIdeas(1, "Eat");
   this->brain->setIdeas(2, "Read");

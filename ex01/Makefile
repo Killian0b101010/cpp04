@@ -8,7 +8,7 @@ SRC = Animal/Animal.cpp	\
 	
 OBJ = $(SRC:.cpp=.o)
 DEP = $(SRC:.cpp=.d)
-FLAGS = -Wall -Wextra -Werror -std=c++98 -MMD -MP
+FLAGS = -Wall -Wextra -Werror -g3 -std=c++98 -MMD -MP
 CC = c++
 RM = rm -rf
 
@@ -29,6 +29,9 @@ fclean: clean
 re : fclean
 
 -include $(DEP)
-
+valgrind: $(NAME)
+	@echo "$(YELLOW)🔍 Lancement de Valgrind sur ./minishell..."
+	clang -g main.cpp -o main && leaks -atExit -- 
+	./main
 .PHONY: clean fclean 
 

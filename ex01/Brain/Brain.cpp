@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 01:10:57 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/26 21:01:45 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/10/26 22:27:40 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@
 Brain::Brain() { std::cout << "This brain is created" << std::endl; }
 
 void Brain::setIdeas(int _ideas, std::string name) {
-  if (_ideas > 100 || _ideas < 0) {
-    std::cout << "Bad index" << std::endl;
-    return;
-  } else
-    ideas[_ideas] = name;
+  // std::cout << "zshhhwd" << std::endl;
+  // if (_ideas >= 100 || _ideas < 0) {
+  //   std::cout << "Bad index" << std::endl;
+  //   return;
+  // }
+  ideas[_ideas] = name;
 }
 Brain::Brain(const Brain &other) {
   for (int i = 0; i < 100; i++)
-    this->ideas[100] = other.ideas[100];
+    this->ideas[i] = other.ideas[i];
 }
 
 Brain::~Brain() { std::cout << "Brain destroyed" << std::endl; }
@@ -37,7 +38,7 @@ Brain &Brain::operator=(const Brain &other) {
 }
 
 std::string Brain::getIdeas(int _ideas) const {
-  if (_ideas > 100 || _ideas < 0)
-    std::cout << "Bad index" << std::endl;
+  // if (_ideas >= 100 || _ideas < 0)
+  //   std::cout << "Bad index" << std::endl;
   return (this->ideas[_ideas]);
 }
