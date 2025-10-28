@@ -6,9 +6,10 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 04:37:33 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/28 01:42:08 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/10/28 04:12:07 by kiteixei         ###   ########.fr       */
 /*                                                                            */
-/* ************************************************************************** */
+/* *********************************************** ``***************************
+ */
 #ifndef AMATERIA_HPP
 #define AMATERIA_HPP
 
@@ -17,7 +18,7 @@
 
 class AMateria {
 protected:
-  std::string materia;
+  std::string _type;
 
 public:
   AMateria();

@@ -1,23 +1,11 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.cpp                                       :+:      :+:    :+:   */
+/*   IMateriaSource.cpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 22:54:23 by kiteixei          #+#     #+# */
-/*   Updated: 2025/10/28 04:51:38 by kiteixei         ###   ########.fr       */
+/*   Created: 2025/10/28 05:55:47 by kiteixei          #+#    #+#             */
+/*   Updated: 2025/10/28 05:55:49 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "AMateria.hpp"
-#include <iostream>
-#include <string>
-
-AMateria::AMateria(std::string const &type) {
-  this->_type = type;
-  std::cout << "AMateria constructor created" << std::endl;
-}
-
-std::string const &AMateria::getType() const { return (this->_type); }
-AMateria::~AMateria() { std::cout << "Destructor AMateria" << std::endl; }
