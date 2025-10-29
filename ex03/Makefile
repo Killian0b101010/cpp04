@@ -1,5 +1,9 @@
 NAME = main 
-SRC = AMateria/Amateria.cpp	\
+SRC = AMateria/AMateria.cpp	\
+			Character/Character.cpp \
+			Cure/Cure.cpp\
+			Ice/Ice.cpp\
+			MateriaSource/MateriaSource.cpp\
 			main.cpp \
 
 	

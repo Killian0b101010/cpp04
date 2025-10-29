@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 01:19:43 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/29 02:41:31 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/10/29 05:21:21 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef CHARACTER
@@ -23,12 +23,13 @@ protected:
 
 public:
   Character();
+  Character(std::string const name);
   ~Character();
   Character(const Character &copy);
   Character &operator=(const Character &other);
   std::string const &getName() const;
   void equip(AMateria *m);
   void unequip(int idx);
-  void use(int idx, Character &target);
+  void use(int idx, ICharacter &target);
 };
 #endif
