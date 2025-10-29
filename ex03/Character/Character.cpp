@@ -6,13 +6,14 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 01:19:48 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/28 05:35:32 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/10/29 02:49:57 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
-#include <iostream>
 #include <string>
+
+// Character Character::(){std::cout}
 
 std::string const &Character::getName() const { return (this->_name); }
 
