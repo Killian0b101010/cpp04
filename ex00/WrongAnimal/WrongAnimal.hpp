@@ -21,7 +21,7 @@ protected:
 
 public:
   WrongAnimal();
-  WrongAnimal(WrongAnimal &other);
+  WrongAnimal(const WrongAnimal &other);
   WrongAnimal &operator=(const WrongAnimal &ope);
   ~WrongAnimal();
   std::string getType(void) const;

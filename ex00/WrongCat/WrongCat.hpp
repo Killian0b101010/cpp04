@@ -20,7 +20,7 @@ private:
 
 public:
   WrongCat();
-  WrongCat(WrongCat &wrongcat);
+  WrongCat(const WrongCat &wrongcat);
   ~WrongCat();
   WrongCat &operator=(const WrongCat &other);
   void makeSound(void) const;

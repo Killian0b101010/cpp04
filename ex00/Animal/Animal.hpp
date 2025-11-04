@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 22:46:36 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/25 22:32:17 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/11/04 16:35:08 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ protected:
 
 public:
   Animal();
-  Animal(Animal &other);
-  Animal operator=(const Animal &ope);
+  Animal(const Animal &other);
+  Animal &operator=(const Animal &ope);
   virtual ~Animal();
   std::string getType(void) const;
   virtual void makeSound(void) const;
+  friend std::ostream &operator<<(std::ostream &out, const Animal &a);
 };
 #endif
-std::ostream &operator<<(std::ostream &out, const Animal &a);

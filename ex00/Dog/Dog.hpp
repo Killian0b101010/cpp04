@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 23:51:30 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/25 22:30:51 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/11/04 09:19:21 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@ private:
 
 public:
   Dog();
-  Dog(Dog &dog);
-  Dog operator=(const Dog &other);
+  Dog(const Dog &dog);
+  Dog &operator=(const Dog &other);
   ~Dog();
   void makeSound(void) const;
+
 };
 #endif

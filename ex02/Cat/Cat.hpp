@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 22:48:47 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/27 03:20:54 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/11/04 17:28:47 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ private:
 
 public:
   Cat();
-  Cat(Cat &cat);
+  Cat(const Cat &cat);
   ~Cat();
-  Cat operator=(const Cat &other);
+  Cat &operator=(const Cat &other);
   void makeSound(void) const;
 };
 #endif

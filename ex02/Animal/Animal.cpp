@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 00:19:29 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/27 03:21:07 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/11/04 18:28:02 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,10 @@ void Animal::makeSound(void) const {
 std::ostream &operator<<(std::ostream &out, const Animal &a) {
   out << a.getType();
   return out;
+}
+
+Animal::Animal(const Animal &copy)
+{
+  std::cout << "Constructor at copy" << std::endl;
+  this->type = copy.type;
 }

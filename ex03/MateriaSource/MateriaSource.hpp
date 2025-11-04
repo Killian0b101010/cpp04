@@ -6,10 +6,10 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 00:09:33 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/29 06:02:59 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:24:09 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../AMateria/AMateria.hpp"
+
 #include "../Character/Character.hpp"
 #include "../IMateriaSource/IMateriaSource.hpp"
 #include <string>
@@ -20,7 +20,9 @@ private:
 
 public:
   MateriaSource();
-  ~MateriaSource() {}
+  ~MateriaSource();
+  MateriaSource( const MateriaSource &copy);
   void learnMateria(AMateria *);
+  MateriaSource &operator=(const MateriaSource &other);
   AMateria *createMateria(std::string const &type);
 };

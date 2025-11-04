@@ -6,10 +6,10 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 23:51:30 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/27 03:21:00 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/11/04 17:29:14 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../Animal/Animal.hpp"
+
 #include "../Brain/Brain.hpp"
 #ifndef DOG_HPP
 #define DOG_HPP
@@ -21,8 +21,8 @@ private:
 
 public:
   Dog();
-  Dog(Dog &dog);
-  Dog operator=(const Dog &other);
+  Dog(const Dog &dog);
+  Dog &operator=(const Dog &other);
   ~Dog();
   void makeSound(void) const;
 };

@@ -11,10 +11,21 @@
 
 #include "Cat.hpp"
 #include <iostream>
+
 Cat::Cat() {
   this->name = "Cat";
   std::cout << "Constructor Cat created" << std::endl;
 }
+
 Cat::~Cat() { std::cout << "Destructor at Cat" << std::endl; }
 
+Cat::Cat(const Cat &copy){*this = copy;}
+
 void Cat::makeSound(void) const { std::cout << "Miaouuuuuuuu" << std::endl; }
+
+Cat &Cat::operator=(const Cat &other)
+{
+  if(this != &other)
+    this->name = other.name;
+  return(*this);
+}

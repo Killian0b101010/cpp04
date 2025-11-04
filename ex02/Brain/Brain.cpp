@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 01:10:57 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/27 03:20:11 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/11/04 18:28:59 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,11 @@ void Brain::setIdeas(int _ideas, std::string name) {
   }
   ideas[_ideas] = name;
 }
+
 Brain::Brain(const Brain &other) {
   for (int i = 0; i < 100; i++)
     this->ideas[i] = other.ideas[i];
+  std::cout << "Constructor at copy called" << std::endl;
 }
 
 Brain::~Brain() { std::cout << "Brain destroyed" << std::endl; }

@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 21:50:20 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/25 22:54:20 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/11/04 16:53:04 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int main() {
   const Animal *i = new Cat();
   std::cout << j->getType() << " " << std::endl;
   std::cout << i->getType() << " " << std::endl;
+  std::cout << *meta << *j << *i <<std::endl; 
   i->makeSound();
   j->makeSound();
   meta->makeSound();

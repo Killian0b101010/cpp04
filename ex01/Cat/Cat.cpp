@@ -14,16 +14,34 @@
 #include <iostream>
 
 Cat::Cat() {
-  this->name = "Cat";
-  std::cout << "Constructor Cat created" << std::endl;
+  this->type= "Cat";
   this->brain = new Brain();
-  this->brain->setIdeas(0, "Think");
-  this->brain->setIdeas(1, "Eat");
-  this->brain->setIdeas(2, "Read");
-
-  for (int i = 0; i < 3; i++)
-    std::cout << this->brain->getIdeas(i) << std::endl;
+  std::cout << "Constructor Cat created" << std::endl;
 }
-Cat::~Cat() { std::cout << "Destructor at Cat" << std::endl; }
 
-void Cat::makeSound(void) const { std::cout << "Miaouuuuuuuu" << std::endl; }
+Cat::~Cat() { delete this-> brain;std::cout << "Destructor at Cat" << std::endl; }
+
+Cat:: Cat(const Cat &copy) : Animal(copy)
+{
+
+  this->type = copy.type;
+  this->brain = new Brain(*copy.brain);
+  std::cout << "Cat Constructor at Copy called" << std::endl;
+}
+
+Cat &Cat::operator=(const Cat &other)
+ {
+  if(this != &other)
+  {
+    this->type = other.type;
+    delete brain;
+    brain = new Brain(*other.brain);
+  }
+  return(*this);
+ }
+
+Brain *Cat::getBrain()
+{
+ return(this->brain);
+}
+void Cat::makeSound(void) const { std::cout << this->getType() << "Miaouuuuuuuu" << std::endl; }

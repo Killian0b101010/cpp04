@@ -22,3 +22,12 @@ WrongCat::~WrongCat() { std::cout << "Destructor at WrongCat" << std::endl; }
 void WrongCat::makeSound(void) const {
   std::cout << this->name << " : WrongMiaouuuuuuuu" << std::endl;
 }
+
+WrongCat::WrongCat(const WrongCat &cpy){*this=cpy;}
+
+WrongCat &WrongCat::operator=(const WrongCat &other)
+{
+ if(this != &other)
+    this->name = other.name;
+  return(*this);
+}

@@ -15,6 +15,7 @@
 #include <string>
 
 AMateria::AMateria() { std::cout << "Default constructor" << std::endl; }
+
 AMateria::AMateria(std::string const &type) {
   this->_type = type;
   std::cout << "AMateria constructor created" << std::endl;

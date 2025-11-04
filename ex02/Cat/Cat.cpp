@@ -17,13 +17,24 @@ Cat::Cat() {
   this->name = "Cat";
   std::cout << "Constructor Cat created" << std::endl;
   this->brain = new Brain();
-  this->brain->setIdeas(0, "Think");
-  this->brain->setIdeas(1, "Eat");
-  this->brain->setIdeas(2, "Read");
-
-  for (int i = 0; i < 3; i++)
-    std::cout << this->brain->getIdeas(i) << std::endl;
 }
+
 Cat::~Cat() { std::cout << "Destructor at Cat" << std::endl; }
 
+Cat &Cat::operator=(const Cat &other)
+ {
+  if(this != &other)
+  {
+    this->type = other.type;
+    delete brain;
+    brain = new Brain(*other.brain);
+  }
+  return(*this);
+ }
+ 
+ Cat:: Cat(const Cat &copy) : Animal(copy)
+{
+  this->brain = new Brain(*copy.brain);
+  std::cout << "Cat Constructor at Copy called" << std::endl;
+}
 void Cat::makeSound(void) const { std::cout << "Miaouuuuuuuu" << std::endl; }

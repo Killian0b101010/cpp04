@@ -6,7 +6,7 @@
 /*   By: kiteixei <kiteixei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 02:04:37 by kiteixei          #+#    #+#             */
-/*   Updated: 2025/10/29 06:32:00 by kiteixei         ###   ########.fr       */
+/*   Updated: 2025/11/04 19:21:42 by kiteixei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 class Ice : public AMateria {
 private:
 public:
-  Ice() : AMateria("ice") {}
+  Ice();
   ~Ice();
   Ice &operator=(const Ice &ice);
   Ice(const Ice &other);
